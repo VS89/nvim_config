@@ -47,5 +47,18 @@ require("lazy").setup({
         },
         lazy = false,
     },
-    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...}
+    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
+    {
+        "nvim-neotest/neotest",
+        dependencies = {
+            "nvim-neotest/nvim-nio",
+            "nvim-lua/plenary.nvim",
+            "nvim-neotest/neotest-python",
+            "antoinemadec/FixCursorHold.nvim",
+            "nvim-treesitter/nvim-treesitter"
+        },
+        -- keys = {
+        --     {"<leader>tt", function() require("neotest").run.run(vim.fn.expand("%")) end, desc = "Run file"}
+        -- }
+    }
 })
