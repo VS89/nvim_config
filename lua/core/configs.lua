@@ -37,3 +37,7 @@ vim.opt.fillchars = {
     foldsep = "│",
     foldclose = "▸"
 }
+
+
+-- Линия длины кода до N символов
+vim.opt.colorcolumn = "120"
