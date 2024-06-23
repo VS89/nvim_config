@@ -1,7 +1,10 @@
 vim.g.mapleader = " "
 
--- Сохранить
+-- Отключить перенос строк
+vim.o.wrap = false
 
+-- LazyGit
+vim.keymap.set( "n", "<leader>lg", "<cmd>LazyGit<CR>" )
 
 -- NeoTree
 vim.keymap.set('n', '<leader>e', ':Neotree float focus<CR>')

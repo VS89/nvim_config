@@ -85,5 +85,23 @@ require("lazy").setup({
         end,
       },
       -- { "folke/neodev.nvim", enabled = false }, -- make sure to uninstall or disable neodev.nvim
+    },
+    {
+        'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'
+    },
+    -- Lazygit
+    {
+      "kdheepak/lazygit.nvim",
+      cmd = {
+        "LazyGit",
+        "LazyGitConfig",
+        "LazyGitCurrentFile",
+        "LazyGitFilter",
+        "LazyGitFilterCurrentFile",
+      },
+      -- optional for floating window border decoration
+      dependencies = {
+        "nvim-lua/plenary.nvim",
+      },
     }
 })
