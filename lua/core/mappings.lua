@@ -41,3 +41,9 @@ vim.keymap.set('n', '<leader>twr', ':lua require("neotest").run.run({adapters = 
 -- fwr - file with report
 vim.keymap.set('n', '<leader>fwr', ':lua require("neotest").run.run({vim.fn.expand("%"), adapters = {require("neotest-python")({ args = {"-n4", "--alluredir=/Users/valentins/Desktop/nvim_test_results"}})}})<CR>')
 
+
+-- Запуск питоновского скрипта с помощью poetry
+vim.keymap.set('n', '<leader>rpf', ':!poetry run python % <CR>')
+
+-- Запуск питоновского скрипта просто через python
+vim.keymap.set('n', '<leader>rf', ':!python3 % <CR>')
