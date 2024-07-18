@@ -1,8 +1,19 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local lspconfig = require('lspconfig')
+
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
+lspconfig.rust_analyzer.setup {
+    filetypes = {"rust"},
+    settings = {
+        ['rust-analyzer'] = {
+            cargo = {
+                allFeatures = true 
+            },      
+        },
+    },
+}
 lspconfig.cssls.setup {
     capabilities = capabilities
 }
