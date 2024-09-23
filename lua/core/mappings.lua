@@ -47,3 +47,11 @@ vim.keymap.set('n', '<leader>rpf', ':!poetry run python % <CR>')
 
 -- Запуск питоновского скрипта просто через python
 vim.keymap.set('n', '<leader>rf', ':!python3 % <CR>')
+
+
+-- hotkeys для переключения между открытыми буферами
+-- Предыдущий буфер
+vim.keymap.set('n', '<leader>bp', ':bprevious <CR>')
+-- Следующий буфер
+vim.keymap.set('n', '<leader>bn', ':bnext <CR>')
+
